@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "preview": "npm run preview --workspaces --if-present",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +15,9 @@
   "workspaces": [
     "app",
     "functions"
-  ]
+  ],
+  "volta": {
+    "node": "18.15.0",
+    "npm": "9.6.3"
+  }
 }
