@@ -1,11 +1,11 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 // eslint-disable-next-line import/no-absolute-path
 import viteLogo from '/vite.svg'
 import './App.css'
+import { useCounter } from './useCounter'
 
 function App () {
-  const [count, setCount] = useState(0)
+  const [counter, increase] = useCounter()
 
   return (
     <div className="App">
@@ -19,8 +19,8 @@ function App () {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => { setCount((count) => count + 1) }}>
-          count is {count}
+        <button onClick={() => increase()}>
+          count is {counter}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR

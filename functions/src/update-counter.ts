@@ -29,13 +29,13 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
       return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ count: counter + 1 })
+        body: JSON.stringify({ counter: counter + 1 })
       }
     case 'decrease':
       return {
         statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ count: counter - 1 })
+        body: JSON.stringify({ counter: counter - 1 })
       }
     default:
       return {
