@@ -29,7 +29,7 @@
   targetPort = 5174
 
 [build.environment]
-  NODE_VERSION = "18.15.0"
-  NPM_VERSION = "9.6.3"
+  NODE_VERSION = "18.17.1"
+  NPM_VERSION = "9.6.7"
 
 ## more info on configuring this file: https://docs.netlify.com/configure-builds/file-based-configuration/
