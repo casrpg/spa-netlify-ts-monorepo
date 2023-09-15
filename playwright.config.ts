@@ -70,7 +70,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'BROWSER=none netlify dev',
+    command: 'BROWSER=none netlify dev --filter app',
     url: 'http://127.0.0.1:8080',
     reuseExistingServer: !process.env.CI,
   },
