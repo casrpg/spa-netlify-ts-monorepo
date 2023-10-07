@@ -10,7 +10,8 @@
     "build": "npm run build --workspaces --if-present",
     "preview": "npm run preview --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test": "npm run lint --workspaces --if-present && npm run test --workspaces --if-present && playwright test"
   },
   "keywords": [],
   "author": "",
