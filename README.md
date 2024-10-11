@@ -6,6 +6,14 @@ using Typescript.
 ## Install
 Run `npm install`
 
+## Run the app
+Run `npm start`
+
+## Test the app
+To test the app you need to install playwright before running the tests.
+
+Run `npm test:e2e`
+
 
 ## Troubleshooting
 
