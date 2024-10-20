@@ -7,12 +7,12 @@ interface CounterResponse {
 }
 
 export type Action = () => Promise<void>
-
+const initialCounterValue = 0
 export const useCounter = (): [number, Action, Action] => {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number>(initialCounterValue)
   const updateCounter = async (action: CounterAction) => {
     const response = await fetch(`/api/update-counter?counterValue=${count}&action=${action}`)
-    const data: CounterResponse = await response.json()
+    const data: CounterResponse = (await response.json()) as CounterResponse
     console.log(data)
     setCount(data.counter)
   }
