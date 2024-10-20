@@ -1,4 +1,5 @@
-import { type Handler, type HandlerEvent, type HandlerContext } from '@netlify/functions'
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+import type { Handler, HandlerEvent, HandlerContext } from '@netlify/functions'
 
 const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
   if (event.httpMethod !== 'GET') {
@@ -13,7 +14,7 @@ const handler: Handler = async (event: HandlerEvent, context: HandlerContext) =>
       body: JSON.stringify({ message: 'query parameters counterValue and action are mandatory' })
     }
   }
-  const { counterValue, action } = event.queryStringParameters
+  const { queryStringParameters:{ counterValue, action } } = event
 
   if (counterValue == null || action == null) {
     return {
