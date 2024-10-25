@@ -9,3 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
+    commit-message:
+      # Avoid netlify preview builds for dependabot PRs
+      prefix: "[skip netlify]"
