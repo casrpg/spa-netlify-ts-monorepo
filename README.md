@@ -3,6 +3,9 @@ This is a simple template for a monorepo containing an SPA built with [Vite](htt
 and with [Netlify functions](https://docs.netlify.com/functions/build/?fn-language=ts) both 
 using Typescript.
 
+It uses [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) so you can have different 
+dependencies for the frontend and the backend.
+
 ## Install
 Run `npm install`
 
@@ -10,10 +13,11 @@ Run `npm install`
 Run `npm start`
 
 ## Test the app
-To test the app you need to install playwright before running the tests.
 
-Run `npm test:e2e`
+You can run the tests with `npm test`.
 
+To run the e2e test, you need to [install playwright](https://playwright.dev/docs/intro#installing-playwright) 
+first and then run `npm test:e2e`.
 
 ## Troubleshooting
 
